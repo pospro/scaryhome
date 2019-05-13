@@ -1,6 +1,6 @@
 package View;
 
-public interface Object {
+public interface GameObject {
 
 	public void setUp();
 	

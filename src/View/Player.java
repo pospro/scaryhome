@@ -1,13 +1,40 @@
 package View;
 
-import com.sun.javafx.geom.Rectangle;
+import javafx.scene.shape.Rectangle;
 
-public class Player extends Rectangle implements Object{
+public class Player extends Rectangle implements GameObject{
 
-	public void setUp()
-	{
-		height = 40;
-		width = 40;
+	
+	private int speed = 5;
+	
+	public Player(int x, int y) {
+		setX(x);
+		setY(y);
+		
+		setUp();
 	}
 	
+	public void setUp()
+	{
+		setHeight(40);
+		setWidth(40);
+	}
+	
+	
+	public void up()
+	{
+		setY(getY() - speed);
+	}
+	public void left()
+	{
+		setX(getX() - speed);
+	}
+	public void down()
+	{
+		setY(getY() + speed);
+	}
+	public void right()
+	{
+		setX(getX() + speed);
+	}
 }

@@ -2,7 +2,7 @@ package View;
 
 import javafx.scene.layout.GridPane;
 
-public class Background extends GridPane implements Object{
+public class Background extends GridPane implements GameObject{
 
 	
 	BackgroundType type;
@@ -13,7 +13,7 @@ public class Background extends GridPane implements Object{
 	
 	@Override
 	public void setUp() {
-		
+		setPrefSize(getScene().getWidth(), getScene().getHeight());
 	}
 
 }
