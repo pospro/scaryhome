@@ -19,7 +19,7 @@ public class App extends Application{
 		s.setOnKeyPressed(new KeyReact(frame));
 		
 		primaryStage.setWidth(400);
-		primaryStage.setHeight(400);
+		primaryStage.setHeight(400 + 28);
 		
 		primaryStage.setScene(s);
 		primaryStage.setResizable(false);

@@ -15,7 +15,6 @@ public class Mainframe extends Group{
 	{
 		setUpBackground();
 		
-		
 		play = new Player(30, 200);
 		getChildren().add(play);
 		

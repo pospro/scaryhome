@@ -16,7 +16,7 @@ public class KeyReact implements EventHandler<KeyEvent>{
 	@Override
 	public void handle(KeyEvent event) {
 		
-		System.out.println(event.getCode());
+//		System.out.println(event.getCode());
 		
 		switch (event.getCode().toString()) {
 		case "W":

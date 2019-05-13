@@ -1,8 +1,8 @@
 package View;
 
-import javafx.scene.layout.GridPane;
+import javafx.scene.Group;
 
-public class Background extends GridPane implements GameObject{
+public class Background extends Group implements GameObject{
 
 	
 	BackgroundType type;
@@ -13,7 +13,7 @@ public class Background extends GridPane implements GameObject{
 	
 	@Override
 	public void setUp() {
-		setPrefSize(getScene().getWidth(), getScene().getHeight());
+		//rect.setFill(Color.TRANSPARENT); -> add Hitboxes (Transparent)
 	}
 
 }
