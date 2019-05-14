@@ -10,13 +10,11 @@ public class App extends Application{
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
-		Mainframe frame = new Mainframe();
-		
-		frame.init();
+		MainMenu frame = new MainMenu();
 		
 		Scene s = new Scene(frame);
 		
-		s.setOnKeyPressed(new KeyReact(frame));
+//		s.setOnKeyPressed(new KeyReact(frame));
 		
 		primaryStage.setWidth(400);
 		primaryStage.setHeight(400 + 28);

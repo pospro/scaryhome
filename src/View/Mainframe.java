@@ -21,7 +21,12 @@ public class Mainframe extends Group{
 		getChildren().add(play);
 		
 		
-		
+//		try {
+//			back = new Background(EditorModel.load("entrance.map"));
+//		} catch (LoadingException e) {
+//			e.printStackTrace();
+//		}
+//		getChildren().add(back);
 	}
 
 	
@@ -33,12 +38,7 @@ public class Mainframe extends Group{
 		
 		getChildren().add(iv);
 		
-		try {
-			back = new Background(EditorModel.load("entrance.map"));
-		} catch (LoadingException e) {
-			e.printStackTrace();
-		}
-		getChildren().add(back);
+		
 	}
 	
 	public Background getBack() {

@@ -4,7 +4,7 @@ import Controller.EditorButton;
 import Controller.MapEditorEvent;
 import Model.Map;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.HBox;
 
 public class Editor extends BorderPane implements GameObject{
 
@@ -24,12 +24,12 @@ public class Editor extends BorderPane implements GameObject{
 		
 		left = new Tools(ctrl);
 		
-		setLeft(Helpful.addVBox(150, 400, left));
+		setLeft(Helpful.addHBox(150, 400, left));
 		
 		right = new EditArea();
 		
 		// Damit Ein Click überall registriert wird
-		VBox v = Helpful.addVBox(400, 400, right);
+		HBox v = Helpful.addHBox(400, 400, right);
 		v.setOnMousePressed(edit);
 		
 		setRight(v);

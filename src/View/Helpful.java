@@ -1,13 +1,13 @@
 package View;
 
 import javafx.scene.Node;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.HBox;
 
 public class Helpful {
 
-	public static VBox addVBox(int width, int height, Node n)
+	public static HBox addHBox(int width, int height, Node n)
 	{
-		VBox ret = new VBox();
+		HBox ret = new HBox();
 		
 		ret.getChildren().add(n);
 		
