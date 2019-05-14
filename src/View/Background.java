@@ -1,13 +1,14 @@
 package View;
 
+import Model.Map;
 import javafx.scene.Group;
 
 public class Background extends Group implements GameObject{
 
 	
-	BackgroundType type;
+	Map type;
 	
-	public Background(BackgroundType type) {
+	public Background(Map type) {
 		this.type = type;
 	}
 	

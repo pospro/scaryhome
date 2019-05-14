@@ -1,5 +1,7 @@
 package View;
 
+import Model.EditorModel;
+import Model.LoadingException;
 import javafx.scene.Group;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -31,7 +33,11 @@ public class Mainframe extends Group{
 		
 		getChildren().add(iv);
 		
-		back = new Background(BackgroundType.EINGANG);
+		try {
+			back = new Background(EditorModel.load("entrance.map"));
+		} catch (LoadingException e) {
+			e.printStackTrace();
+		}
 		getChildren().add(back);
 	}
 	

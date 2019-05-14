@@ -19,6 +19,11 @@ public class Map implements Serializable{
 		this.objects = objects;
 	}
 	
+	public void appendObj(GameObject object)
+	{
+		objects.add(object);	
+	}
+	
 	public ArrayList<GameObject> getObj()
 	{
 		return objects;

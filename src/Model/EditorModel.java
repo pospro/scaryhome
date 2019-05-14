@@ -1,8 +1,10 @@
 package Model;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 public class EditorModel {
@@ -23,4 +25,23 @@ public class EditorModel {
 		}
 	}
 	
+	public static Map load(String path) throws LoadingException
+	{
+		FileInputStream out;
+		try {
+			out = new FileInputStream(new File(path+".map"));
+			
+			ObjectInputStream w = new ObjectInputStream(out);
+			
+			Map ret = (Map) w.readObject();
+			
+			w.close();
+			
+			return ret;
+		} catch (IOException | ClassNotFoundException e) {
+			throw new LoadingException("Failed to load");
+		}
+		
+		
+	}
 }
