@@ -12,7 +12,6 @@ public class KeyReact implements EventHandler<KeyEvent>{
 	
 	public KeyReact(Mainframe frame) {
 		this.frame = frame;
-		System.out.println("created");
 	}
 	
 	@Override
@@ -23,7 +22,6 @@ public class KeyReact implements EventHandler<KeyEvent>{
 		switch (event.getCode().toString()) {
 		case "W":
 			frame.getPlay().up();
-			System.out.println("w");
 			break;
 
 		case "A":
