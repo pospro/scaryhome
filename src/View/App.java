@@ -1,6 +1,5 @@
 package View;
 
-import Controller.KeyReact;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;

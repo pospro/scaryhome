@@ -1,5 +1,6 @@
 package Controller;
 
+import View.Editor;
 import View.Mainframe;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
@@ -11,16 +12,11 @@ public class MenuButtonEvent implements EventHandler<MouseEvent>{
 	public void handle(MouseEvent event) {
 		switch (((Button)(event.getSource())).getUserData().toString()) {
 		case "play":
-			
-			Mainframe m = new Mainframe();
-			
-			m.init();
-			
-			((Button)(event.getSource())).getScene().setRoot(m);
+			updateOnMainframe(new Mainframe(), event);
 			break;
 
 		case "edit":
-			
+			updateOnEdit(new Editor(), event);
 			break;
 			
 		default:
@@ -28,4 +24,20 @@ public class MenuButtonEvent implements EventHandler<MouseEvent>{
 		}
 	}
 
+	
+	private void updateOnMainframe(Mainframe p, MouseEvent event)
+	{
+		p.init();
+		
+		KeyReact ctrl = new KeyReact(p);
+		
+		((Button)(event.getSource())).getScene().setOnKeyPressed(ctrl);;
+		
+		((Button)(event.getSource())).getScene().setRoot(p);
+	}
+	
+	private void updateOnEdit(Editor p, MouseEvent event)
+	{
+		((Button)(event.getSource())).getScene().setRoot(p);
+	}
 }

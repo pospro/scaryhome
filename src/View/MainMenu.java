@@ -34,6 +34,7 @@ public class MainMenu extends VBox implements GameObject{
 		edit.setUserData("edit");
 		
 		play.setOnMouseClicked(ctrl);
+		edit.setOnMouseClicked(ctrl);
 		
 		getChildren().add(play);
 		getChildren().add(edit);

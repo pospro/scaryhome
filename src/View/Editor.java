@@ -14,6 +14,7 @@ public class Editor extends BorderPane implements GameObject{
 	MapEditorEvent edit;
 	
 	public Editor() {
+		System.out.println("test");
 		setUp();
 	}
 	

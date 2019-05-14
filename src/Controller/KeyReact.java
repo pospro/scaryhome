@@ -1,8 +1,8 @@
 package Controller;
 
+import View.MainMenu;
 import View.Mainframe;
 import javafx.event.EventHandler;
-import javafx.scene.input.KeyCombination;
 import javafx.scene.input.KeyEvent;
 
 public class KeyReact implements EventHandler<KeyEvent>{
@@ -37,6 +37,11 @@ public class KeyReact implements EventHandler<KeyEvent>{
 		case "D":
 			frame.getPlay().right();
 			System.out.println("d");
+			break;
+			
+		case "ESCAPE":
+			frame.getScene().setOnKeyPressed(null);
+			frame.getScene().setRoot(new MainMenu());
 			break;
 			
 //		case :
