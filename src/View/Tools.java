@@ -20,6 +20,9 @@ public class Tools extends GridPane implements GameObject{
 	@Override
 	public void setUp() {
 		
+		setStyle("-fx-background-color: red");
+		setPrefWidth(150);
+		
 		load = new Button("load");
 		save = new Button("save");
 		
